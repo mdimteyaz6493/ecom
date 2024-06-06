@@ -1,0 +1,97 @@
+.payment{
+    background-color: rgb(237, 237, 237);
+    min-height: 100vh;
+    width: 100vw;
+    padding:100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+.payment .order_details{
+    width: 60%;
+}
+.payment .order_details .cont{
+    min-height:200px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.payment .order_details .user_details .sec_title, .payment .order_details .selected_products .sec_title,.payment .order_details .payment_options .sec_title, .payment .amount_part .sec_title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(78, 76, 195);
+    padding: 10px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+.payment .order_details .user_details .user_name{
+    font-size: 1.4rem;
+    margin: 20px 0px 0px 10px;
+}
+.payment .order_details .user_details .user_contact{
+    font-size: 1.2rem;
+    margin: 5px 0px 0px 10px;
+}
+.payment .order_details .user_details .user_address{
+    font-size: 1.2rem;
+    margin: 5px 0px 0px 10px;
+}
+
+.payment .order_details .payment_options{
+    min-height: 200px;
+}
+.payment .order_details .payment_options .payment_option{
+    margin: 10px 20px;
+    font-size: 1.4rem;
+}
+.payment .order_details .payment_options .payment_option li{
+    list-style: none;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgb(239, 237, 237);
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.payment .amount_part{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+}
+.payment .amount_part .amount{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    
+}
+.amount span{
+font-size: 1.2rem;
+}
+
+.place_order{
+    height: 40px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(8, 175, 72);
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.place_order:hover{
+    background-color: rgb(8, 124, 52);
+
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=McLaren&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: rgb(235, 234, 234);
+}
+section{
+    padding: 30px;
+    width: 100%;
+}
+.home_slider{
+    height: 500px;
+}
+.home_slider .slider{
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.home_slider .slider .slide{
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.home_slider .slider .slide img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    offset-position: center;
+    filter: opacity(0.7);
+    
+}
+.slick-prev, .slick-next {
+    display: block !important;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black; /* Change to desired color */
+}
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

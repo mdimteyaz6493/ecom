@@ -1,0 +1,190 @@
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.cart{
+    padding:100px;
+    background-color: rgb(255, 255, 255);
+    min-height: 80vh;
+    width: 100vw;
+    z-index: -2000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cart .cart_part1{
+    height: 60%;
+    width: 60%;
+}
+.cart .cart_products{
+    min-height: 50%;
+    background-color: white;
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+.cart_single_product{
+border-bottom: 2px solid black;
+padding: 10px;
+display: flex;
+height: 260px;
+}
+.cart_single_product .cart_product_image{
+    height: 80%;
+    min-width: 40%;
+    margin-right: 20px;
+}
+.cart_single_product .cart_product_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.cart_single_product .cart_product_desc .cart_product_name{
+font-size: 1.5rem;
+}
+.cart_single_product .cart_product_desc .cart_product_rating{
+    font-size: 1.2rem;
+}
+.cart_single_product .cart_product_desc .cart_product_price{
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bolder;
+    margin: 20px 0px;
+}
+.cart_single_product .cart_product_desc .quantity{
+    background-color: rgb(245, 239, 239);
+    height: 30px;
+    width: 100px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.cart_single_product .cart_product_desc .quantity button{
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.cart_single_product .cart_product_desc .quantity span{
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.cart_single_product .cart_product_desc .quantity button:nth-child(1){
+    font-size: 1.8rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+.cart_single_product .cart_product_desc .quantity button:nth-child(3){
+    font-size: 1.8rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+.cart_single_product .cart_product_desc .quantity button:nth-child(1):hover,.cart_single_product .cart_product_desc .quantity span:nth-child(3):hover{
+   scale: 0.9;
+}
+.cart_single_product .cart_product_desc .remove img{
+    height: 25px;
+    cursor: pointer;
+    
+}
+.cart_actions_btn{
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+.cart_actions_btn .continue_shop{
+    height: 40px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    cursor: pointer;
+}
+.cart_actions_btn .clear_cart{
+    height: 40px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(241, 13, 13);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.amount{
+    background-color: rgb(239, 237, 237);
+    height: 180px;
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 5px;
+}
+.amount span{
+font-size: 1.2rem;
+}
+
+.cart .cart_part1 .place_order{
+    height: 60px;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(8, 175, 72);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10000;
+    top: 50px;
+    right:50px ;
+
+}
+.place_order:hover{
+    background-color: rgb(8, 124, 52);
+
+}
+.empty_cart{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty_cart img{
+    height: 400px;
+    width: 400px;
+}
+.empty_cart span{
+    font-size: 1.6rem;
+    margin: 20px;
+    font-weight: bold;
+    color: rgb(55, 55, 138);
+}
+.empty_cart .continue_shop{
+    height: 40px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    cursor: pointer;
+}

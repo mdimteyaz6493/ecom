@@ -1,0 +1,60 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    min-height: 300px;
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    outline: none;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .modal input{
+    height: 50px;
+    padding: 0px 10px;
+    outline: 1px solid rgb(0, 0, 0);
+    border: none;
+    border-radius: 2px;
+  }
+  .modal .verify{
+    color: blue;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    top: 32%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+  }
+  .modal .confirm{
+    background-color: green;
+    height: 50px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+  }
+  .modal .cancel{
+    background-color: red;
+    height: 50px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
