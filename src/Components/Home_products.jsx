@@ -10,8 +10,18 @@ const Home_products = () => {
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 768, // You can adjust the breakpoint as needed
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     };
+
 
     // Slice the first 10 products
     const slicedProductData = product_data.slice(0, 6);

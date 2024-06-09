@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Card_Modal = ({ isOpen, onRequestClose, onConfirm ,handleClearCart}) => {
     const navigate = useNavigate();
-  const { sub_total } = useContext(UserContext);
+  const { totalPay } = useContext(UserContext);
   const [cardNumber, setcardNumber] = useState("");
   const [expiray, setexpiray] = useState("");
   const [cvv, setcvv] = useState("");
@@ -51,9 +51,9 @@ const Card_Modal = ({ isOpen, onRequestClose, onConfirm ,handleClearCart}) => {
       />
 
       {cardNumber && expiray && cvv? <button onClick={handleConfirm} className="confirm">
-        PAY Rs {sub_total}
+        PAY Rs {totalPay}
       </button>:<button onClick={handleConfirm} className="confirm" style={{backgroundColor:"grey"}}>
-        PAY Rs {sub_total}
+        PAY Rs {totalPay}
       </button>}
       <button onClick={onRequestClose} className="cancel">
         Cancel

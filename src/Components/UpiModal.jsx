@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const UpiModal = ({ isOpen, onRequestClose, onConfirm,handleClearCart }) => {
   const navigate = useNavigate()
-  const { sub_total } = useContext(UserContext);
+  const { totalPay } = useContext(UserContext);
   const [upiId, setUpiId] = useState("");
   const [verify, setverify] = useState(false);
 
@@ -50,9 +50,9 @@ const UpiModal = ({ isOpen, onRequestClose, onConfirm,handleClearCart }) => {
         )}
       </span>
       {verify? <button onClick={handleConfirm} className="confirm">
-        PAY Rs {sub_total}
+        PAY Rs {totalPay}
       </button>:<button onClick={handleConfirm} className="confirm" style={{backgroundColor:"grey"}}>
-        PAY Rs {sub_total}
+        PAY Rs {totalPay}
       </button>}
       <button onClick={onRequestClose} className="cancel">
         Cancel

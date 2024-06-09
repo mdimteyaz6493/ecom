@@ -7,6 +7,7 @@ const UserProvider = ({children})=>{
     const [searchingItem, setsearchingItem] = useState()
     const [sub_total, setsub_total] = useState(0)
     const [cart, setcart] = useState([])
+    const [totalPay,setTotalPay] = useState(0)
 
     const updateQuantity = (id, delta) => {
         setcart((prevCart) => {
@@ -28,6 +29,6 @@ const UserProvider = ({children})=>{
       };
     
 
-    return <UserContext.Provider value={{Category,setCategory,searchingItem,setsearchingItem,setsub_total,sub_total,cart,setcart,updateQuantity,removeProduct}}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={{Category,setCategory,searchingItem,setsearchingItem,setsub_total,sub_total,cart,setcart,updateQuantity,removeProduct,totalPay,setTotalPay}}>{children}</UserContext.Provider>
 }
 export default UserProvider;

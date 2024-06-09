@@ -7,11 +7,13 @@ import "../Styles/payment.css";
 import Navbar from '../Components/Navbar';
 import UpiModal from '../Components/UpiModal';
 import Card_Modal from '../Components/Card_Modal';
+import Cash_Modal from '../Components/Cash_Modal';
 
 const Payment = () => {
   const { cart, setcart } = useContext(UserContext);
   const [isUpiModalOpen, setIsUpiModalOpen] = useState(false);
   const [isCardModalOpen, setIsCardModalOpen] = useState(false);
+  const [isCashModalOpen, setIsCashModalOpen] = useState(false);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -26,6 +28,9 @@ const Payment = () => {
   const handleCardClick = () => {
     setIsCardModalOpen(true);
   };
+  const handleCashClick = () => {
+    setIsCashModalOpen(true);
+  };
 
   const handleUpiConfirm = (upiId) => {
     console.log('UPI ID:', upiId);
@@ -35,6 +40,7 @@ const Payment = () => {
     console.log('Card Number:', cardNumber);
     // Handle order confirmation here
   };
+  
   const handleClearCart = () => {
     setcart([]);
     localStorage.setItem('cart', JSON.stringify([]));
@@ -49,7 +55,7 @@ const Payment = () => {
             <span className="user_name">Imteyaz</span>
             <span className='user_contact'>+91 9955667788</span>
             <span className='user_address'>
-              Nasima House west gandi maidan near biscoman bhawan patna - 800001
+              Flat no XYZ , ABC Appartment bank colony , patna - 800001
             </span>
           </div>
           <div className="cont selected_products">
@@ -67,9 +73,9 @@ const Payment = () => {
           <div className="cont payment_options">
             <span className='sec_title'>Payment Options</span>
             <ul className='payment_option'>
-                <li onClick={handleUpiClick}>Upi</li>
+                <li onClick={handleUpiClick}>UPI</li>
                 <li onClick={handleCardClick}>Card</li>
-                <li>Cash</li>
+                <li onClick={handleCashClick}>Cash on Delivery</li>
             </ul>
           </div>
         </div>
@@ -88,6 +94,11 @@ const Payment = () => {
         isOpen={isCardModalOpen} 
         onRequestClose={() => setIsCardModalOpen(false)} 
         onConfirm={handleCardConfirm} 
+        handleClearCart = {handleClearCart}
+      />
+      <Cash_Modal
+        isOpen={isCashModalOpen} 
+        onRequestClose={() => setIsCashModalOpen(false)} 
         handleClearCart = {handleClearCart}
       />
     </>

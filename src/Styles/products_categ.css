@@ -33,3 +33,34 @@
     width: 100%;
     object-fit: contain;
 }
+@media (Max-width:768px){
+    .categories{
+        padding: 10px 60px;
+        height:150px;
+        background-color: white;
+        display: flex;
+        gap: 50px;
+        border-radius: 5px;
+    }
+    .categories .category{
+        height: 100%;
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .categories .category .image{
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 0px;
+        cursor: pointer;
+    }
+    .categories .category .image img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
